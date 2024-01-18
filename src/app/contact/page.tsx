@@ -32,7 +32,7 @@ const ContactPage = () => {
 
     return (
         <PageWrapper dir={true}>
-            <div className="h-full min-h-screen flex flex-col items-center justify-center pt-36 p-4 xl:p-36 gap-4">
+            <div className="h-full min-h-svh flex flex-col items-center justify-center pt-36 p-4 xl:p-36 gap-4 w-full">
                 <span className={`${ibmPlex.className} text-[3rem] font-semibold leading-normal xl:self-start`}> Contact us </span>
                 <div className="flex flex-col xl:flex-row gap-4 xl:gap-0 items-center justify-between w-full h-full">
                     {

@@ -5,9 +5,15 @@ import PageWrapper from "@/components/PageWrapper";
 export default function Home() {
   return (
     <PageWrapper dir={false}>
-      <Landing />
-      <About />
-      <Join />
+      <section id="landing">
+        <Landing />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="join">
+        <Join />
+      </section>
     </PageWrapper>
   )
 }

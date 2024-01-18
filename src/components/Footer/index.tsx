@@ -14,7 +14,34 @@ const Footer = () => {
                 <Image src={nitc} alt="nitc" className="h-[3rem] xl:h-[6.47156rem] w-[2.4627rem] xl:w-[5.3125rem]" />
                 <Image src={ragam} alt="ragam" className="w-[7rem] xl:w-[14rem]" />
             </div>
-            <div className="flex gap-[3.52rem]">
+            <div className="flex items-center justify-center gap-[3.52rem] md:hidden">
+                <a
+                    className="flex items-center justify-center w-[3.125rem] h-[3.125rem] border border-[3px] rounded-[3.125rem] border-[#585858] bg-white/50"
+                    href="https://www.instagram.com/ragam_nitc/"
+                    target="_blank"
+                >
+                    <Image src={insta} alt="insta" className="object-cover" />
+                </a>
+                <a
+                    className="flex items-center justify-center w-[3.125rem] h-[3.125rem] border border-[3px] rounded-[3.125rem] border-[#585858] bg-white/50"
+                    href="#"
+                >
+                    <Image src={twitter} alt="twitter" className="object-cover" />
+                </a>
+                <a
+                    className="flex items-center justify-center w-[3.125rem] h-[3.125rem] border border-[3px] rounded-[3.125rem] border-[#585858] bg-white/50"
+                    href="#"
+                >
+                    <Image src={youtube} alt="youtube" className="object-cover" />
+                </a>
+                <a
+                    className="flex items-center justify-center w-[3.125rem] h-[3.125rem] border border-[3px] rounded-[3.125rem] border-[#585858] bg-white/50"
+                    href="#"
+                >
+                    <Image src={whatsapp} alt="whatsapp" className="object-cover" />
+                </a>
+            </div >
+            <div className="md:flex gap-[3.52rem] hidden">
                 <Chip href="https://www.instagram.com/ragam_nitc/" blank>
                     <Image src={insta} alt="insta" className="object-cover" />
                 </Chip>
@@ -33,7 +60,7 @@ const Footer = () => {
                 <span className="text-[0.875rem] font-normal leading-normal mt-[0.62rem]"> Calicut Mukkam Road, Kattangal </span>
                 <span className="text-[0.875rem] font-normal leading-normal"> Kerala 673601 </span>
             </div>
-        </div>
+        </div >
     )
 }
 

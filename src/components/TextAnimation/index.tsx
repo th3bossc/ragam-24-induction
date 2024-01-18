@@ -48,7 +48,7 @@ const TextAnimation = ({
                 initial="rest"
                 animate={hovered ? "hover" : "rest"}
                 transition={{
-                    staggerChildren: 0.01,
+                    staggerChildren: 0.02,
                 }}
             >
                 {
@@ -58,7 +58,7 @@ const TextAnimation = ({
                         ) : (
                             <motion.span
                                 key={index}
-                                className="relative inline-block whitespace-nowrap text-inherit font-bold"
+                                className="relative inline-block whitespace-nowrap text-inherit font-bold text-xs xl:text-lg"
                                 variants={top ? textAnimation.topTextAnimation : textAnimation.bottomTextAnimation}
                             >
                                 {char}

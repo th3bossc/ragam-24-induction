@@ -4,7 +4,7 @@ import { IBM_Plex_Serif } from "next/font/google";
 const ibmPlexSerif = IBM_Plex_Serif({ subsets: ['latin'], weight: ['600'] });
 const About = () => {
     return (
-        <div className="flex w-full h-full min-h-screen justify-center xl:justify-between items-center p-4 xl:p-24 relative">
+        <div className="flex w-full h-full min-h-svh justify-center xl:justify-between items-center p-4 xl:p-24 relative">
             <Image className="hidden lg:block lg:absolute lg:-top-24 lg:-left-24 xl:static -z-10 lg:opacity-50 xl:opacity-100" src={aboutImage} alt="about-image" />
             <div className="flex flex-col gap-[1.5rem] ml-auto w-full xl:w-[45.8125rem] text-center xl:text-left">
                 <span className={`text-3xl xl:text-4xl font-semibold ${ibmPlexSerif.className}`}>About us</span>

@@ -12,7 +12,7 @@ const ibmPlexSans = IBM_Plex_Sans({ subsets: ['latin'], weight: ['300', '400', '
 const Landing = () => {
     return (
         <div className={`relative flex ${ibmPlexSans.className}`}>
-            <div className="h-full min-h-screen w-full relative flex justify-center xl:justify-between items-center p-4 xl:p-24 overflow-hidden" >
+            <div className="h-full min-h-svh w-full relative flex justify-center xl:justify-between items-center p-4 xl:p-24 overflow-hidden" >
                 <div className="flex flex-col w-[40rem] gap-[1.5rem] relative">
                     <span className={`font-bold text-center xl:text-left text-3xl xl:text-[3.5rem] xl:leading-normal  ${ibmPlexSerif.className}`}>
                         Ragam ‘24 Tech-Team Inductions
@@ -20,7 +20,7 @@ const Landing = () => {
                     <span className="text-lg xl:text-[1.375rem] xl:leading-normal text-center xl:text-left font-light">
                         Embrace the challenges that lie ahead, as you become part of a community dedicated to pushing boundaries and shaping the fest.
                     </span>
-                    <AnimatedButton onClick={() => { }}>
+                    <AnimatedButton href="#about">
                         <div className="flex w-full justify-center items-center gap-4">
                             <span> Explore </span>
                             <Image src={buttonArrow} alt="button-arrow" />
