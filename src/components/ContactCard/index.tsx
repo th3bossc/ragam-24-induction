@@ -24,6 +24,7 @@ const ContactCard = ({
             onMouseOver={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             whileTap={{ scale: 0.95 }}
+            onClick={() => setHovered(false)}
         >
             <div className="w-[5rem] h-[5rem] p-[0.625rem] rounded-[3.125rem] bg-black flex items-center justify-center">
                 <Image src={icon} alt="icon" className='w-[2.25rem] h-[2.25rem]' />
