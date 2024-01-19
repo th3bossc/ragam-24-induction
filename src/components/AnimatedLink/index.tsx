@@ -7,7 +7,7 @@ const AnimatedLink = ({ title, href }: { title: string, href: string }) => {
     const [hovered, setHovered] = useState(false);
     return (
         <div
-            className="relative cursor-pointer overflow-hidden"
+            className="relative cursor-pointer overflow-hidden z-10"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >

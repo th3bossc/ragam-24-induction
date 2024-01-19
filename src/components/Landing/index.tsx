@@ -6,6 +6,7 @@ import circle from '/public/landingImage.svg';
 import downArrow from '/public/downArrow.svg';
 import AnimatedButton from "../AnimatedButton";
 import buttonArrow from '/public/buttonArrow.svg';
+import { motion } from "framer-motion";
 const ibmPlexSerif = IBM_Plex_Serif({ subsets: ['latin'], weight: ['300', '400', '700'] })
 const ibmPlexSans = IBM_Plex_Sans({ subsets: ['latin'], weight: ['300', '400', '700'] })
 
@@ -27,7 +28,13 @@ const Landing = () => {
                         </div>
                     </AnimatedButton>
                 </div>
-                <Image className="hidden lg:block lg:absolute lg:-top-24 lg:-right-24 xl:static -z-10 lg:opacity-50 xl:opacity-100" src={circle} alt="circle" />
+                <motion.div
+                    initial={{ opacity: 0, rotate: -25 }}
+                    whileInView={{ opacity: 1, rotate: 0 }}
+                    viewport={{ once: true }}
+                >
+                    <Image className="absolute -top-48 -right-48 xl:static -z-100 opacity-50 xl:opacity-100" src={circle} alt="circle" />
+                </motion.div>
             </div>
             <div className="flex flex-col text-[1.375rem] font-normal absolute bottom-2 opacity-50 justify-center items-center w-full">
                 <span> Learn more</span>

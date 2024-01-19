@@ -13,7 +13,7 @@ const Navbar = ({ current }: { current: string }) => {
     const { scrollYProgress } = useScroll();
     const width = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
     const [size, setSize] = useState(0);
-
+    console.log(current);
     useEffect(() => {
         setSize(window.innerWidth);
         window.onresize = window.onload = () => setSize(window.innerWidth);
@@ -33,10 +33,14 @@ const Navbar = ({ current }: { current: string }) => {
                         linkItems.map((item, index) => (
                             <motion.div
                                 key={index}
-                                className="p-0 xl:p-2 xl:hover:bg-slate-200 rounded-md cursor-pointer h-full"
-                                style={{ color: current === item.href ? '#000' : '#334155' }}
+                                className="p-0 xl:p-2 rounded-md h-full relative"
                             >
                                 <AnimatedLink title={item.title} href={item.href} />
+                                {
+                                    current === item.href && (
+                                        <motion.span className="absolute top-0 left-0 -z-1 rounded-md bg-slate-200 w-full h-full" layoutId="current" />
+                                    )
+                                }
                             </motion.div>
                         ))
                     }

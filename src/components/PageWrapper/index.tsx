@@ -1,13 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
 const PageWrapper = ({ children, dir }: { children: React.ReactNode, dir: boolean }) => {
-    const [size, setSize] = useState(0);
-    console.log(size);
-    useEffect(() => {
-        setSize(window.innerWidth);
-        window.onresize = window.onload = () => setSize(window.innerWidth);
-    }, [])
     return (
         <AnimatePresence>
             {
